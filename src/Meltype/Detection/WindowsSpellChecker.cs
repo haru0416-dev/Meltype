@@ -61,6 +61,8 @@ public sealed class WindowsSpellChecker : IWordChecker
         }
     }
 
+    public int MaxWordLength => 30;
+
     /// <summary>小文字の英単語 (a-z だけ) が、英語として正しい綴りか。</summary>
     public bool IsWord(string lower) => Lookup(lower, forWord: true) is { IsWord: true };
 
